@@ -12,10 +12,12 @@ export default function MoneyLayer() {
           fill
           sizes="100vw"
           quality={85}
-          className="h-full w-full object-cover object-bottom"
+          className="h-full w-full object-cover object-bottom brightness-[0.78] saturate-[0.88]"
           priority
         />
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-dark-900 via-dark-900/50 to-transparent sm:h-52" />
+        <div className="absolute inset-0 bg-background/18" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/35 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background/55 to-transparent sm:h-48" />
       </div>
 
       {/* Floating bills with depth */}

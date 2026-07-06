@@ -48,6 +48,8 @@ export default function Hero() {
       ))}
 
       <div className="relative z-[10] mx-auto max-w-4xl px-4 pt-28 text-center sm:px-8 sm:pt-32 lg:px-12">
+        <div className="pointer-events-none absolute inset-x-[-4%] top-[28%] bottom-[8%] -z-10 rounded-[32px] bg-[radial-gradient(ellipse_at_center,rgba(6,5,4,0.62)_0%,rgba(6,5,4,0.28)_50%,transparent_72%)]" />
+
         <motion.p
           className="eyebrow mb-4"
           initial={{ opacity: 0, y: 16 }}
@@ -75,14 +77,14 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <LaurelIcon className="h-4 w-7 text-gold/70" />
-          <p className="text-sm text-beige-muted sm:text-base">
+          <p className="text-sm text-beige drop-shadow-[0_1px_10px_rgba(6,5,4,0.75)] sm:text-base">
             The UAE Record-Breaking Agency
           </p>
           <LaurelIcon className="h-4 w-7 scale-x-[-1] text-gold/70" />
         </motion.div>
 
         <motion.p
-          className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-beige-muted sm:text-base"
+          className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-beige/95 drop-shadow-[0_1px_12px_rgba(6,5,4,0.8)] sm:text-base"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
