@@ -69,30 +69,30 @@ const en: Dictionary = {
       },
       "before-after": {
         name: "Before & After",
-        result: "Transformation content that builds trust and social proof",
+        result: "Before and after — real client results",
       },
       "before-after-main": {
-        name: "Clinical Result",
-        result: "High-converting before/after creative for patient acquisition",
+        name: "Before & After",
+        result: "Premium before/after creative",
       },
       "before-after-1": {
-        name: "Case Result 01",
-        result: "Patient transformation content for Instagram and ads",
+        name: "Before & After",
+        result: "Case 01 — transformation result",
       },
       "before-after-2": {
-        name: "Case Result 02",
-        result: "Visual proof content that increases appointment requests",
+        name: "Before & After",
+        result: "Case 02 — transformation result",
       },
       "before-after-3": {
-        name: "Case Result 03",
-        result: "Consistent before/after series for clinic brand authority",
+        name: "Before & After",
+        result: "Case 03 — transformation result",
       },
     },
   },
   reels: {
     title: "Client reels",
     hint: "Auto slider",
-    client: "Brand Boost Client",
+    client: "Qimat Agency Client",
     items: {
       "reel-1": "Client reel — real results from social media",
       "reel-2": "Growth case — content that brings leads",
@@ -273,30 +273,30 @@ const ru: Dictionary = {
       },
       "before-after": {
         name: "До и после",
-        result: "Контент трансформаций для доверия и социального доказательства",
+        result: "Результат до и после работы",
       },
       "before-after-main": {
-        name: "Клинический результат",
-        result: "Креативы до/после с высокой конверсией на запись",
+        name: "До и после",
+        result: "Премиальный креатив до/после",
       },
       "before-after-1": {
-        name: "Кейс 01",
-        result: "Контент трансформации пациента для Instagram и рекламы",
+        name: "До и после",
+        result: "Кейс 01 — результат трансформации",
       },
       "before-after-2": {
-        name: "Кейс 02",
-        result: "Визуальное доказательство, которое увеличивает заявки",
+        name: "До и после",
+        result: "Кейс 02 — результат трансформации",
       },
       "before-after-3": {
-        name: "Кейс 03",
-        result: "Серия до/после для авторитета бренда клиники",
+        name: "До и после",
+        result: "Кейс 03 — результат трансформации",
       },
     },
   },
   reels: {
     title: "Рилсы клиентов",
     hint: "Автослайдер",
-    client: "Клиент Brand Boost",
+    client: "Клиент Qimat Agency",
     items: {
       "reel-1": "Рилс клиента — реальные результаты в соцсетях",
       "reel-2": "Кейс роста — контент, который приводит лиды",
@@ -473,30 +473,30 @@ const tj: Dictionary = {
       },
       "before-after": {
         name: "Пеш ва баъд",
-        result: "Контенти тағйирот барои эътимод ва исботи иҷтимоӣ",
+        result: "Натиҷа пеш ва баъди кор",
       },
       "before-after-main": {
-        name: "Натиҷаи клиникӣ",
-        result: "Креативҳои пеш/баъд бо конверсияи баланд ба қабул",
+        name: "Пеш ва баъд",
+        result: "Креативи премиум пеш/баъд",
       },
       "before-after-1": {
-        name: "Кейс 01",
-        result: "Контенти тағйироти бемор барои Instagram ва реклама",
+        name: "Пеш ва баъд",
+        result: "Кейс 01 — натиҷаи тағйирот",
       },
       "before-after-2": {
-        name: "Кейс 02",
-        result: "Исботи визуалӣ, ки дархостҳоро зиёд мекунад",
+        name: "Пеш ва баъд",
+        result: "Кейс 02 — натиҷаи тағйирот",
       },
       "before-after-3": {
-        name: "Кейс 03",
-        result: "Силсилаи пеш/баъд барои обрӯи бренди клиника",
+        name: "Пеш ва баъд",
+        result: "Кейс 03 — натиҷаи тағйирот",
       },
     },
   },
   reels: {
     title: "Рилсҳои муштариён",
     hint: "Слайдери автоматӣ",
-    client: "Муштарии Brand Boost",
+    client: "Муштарии Qimat Agency",
     items: {
       "reel-1": "Рилси муштарӣ — натиҷаҳои воқеӣ аз соцмедиа",
       "reel-2": "Кейси рушд — контент, ки лид меорад",

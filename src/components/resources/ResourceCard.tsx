@@ -50,14 +50,14 @@ export default function ResourceCard({ item, index }: ResourceCardProps) {
 
         <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/25 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="absolute inset-x-0 bottom-0 translate-y-3 p-3 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 sm:p-4">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="text-sm font-bold leading-snug text-gold sm:text-base">
+        <div className="absolute inset-x-0 bottom-0 translate-y-3 p-4 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 sm:p-5">
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-bold leading-snug text-gold sm:text-lg">
               {copy.title}
             </h3>
-            <HiArrowUpRight className="mt-0.5 shrink-0 text-base text-gold/80 sm:text-lg" />
+            <HiArrowUpRight className="mt-0.5 shrink-0 text-lg text-gold/90 sm:text-xl" />
           </div>
-          <p className="mt-1.5 line-clamp-2 text-[11px] leading-relaxed text-muted sm:text-xs">
+          <p className="mt-2 text-sm leading-relaxed text-beige sm:text-[15px]">
             {copy.description}
           </p>
         </div>

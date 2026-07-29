@@ -8,7 +8,7 @@ type SiteLogoProps = {
   priority?: boolean;
 };
 
-/** Sharp circular logo — native resolution, no CSS scale blur */
+/** Sharp circular logo — less zoom, readable at native quality */
 export default function SiteLogo({
   className = "h-[82px] w-[82px] sm:h-[92px] sm:w-[92px]",
   priority = false,
@@ -20,10 +20,10 @@ export default function SiteLogo({
       <Image
         src={SITE.logo}
         alt={SITE.name}
-        width={512}
-        height={512}
+        width={1024}
+        height={1024}
         unoptimized
-        className="h-full w-full object-contain object-center p-[3px] sm:p-1"
+        className="h-full w-full object-contain object-center p-[9px] sm:p-[10px]"
         priority={priority}
       />
     </span>
