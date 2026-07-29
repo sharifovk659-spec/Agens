@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { HiCheck } from "react-icons/hi";
 import { useLanguage } from "@/lib/i18n/context";
 import { SITE } from "@/lib/constants";
 import { FOUNDER } from "@/lib/founder";
@@ -41,8 +42,8 @@ export default function FounderPhotoCard() {
           rel="noopener noreferrer"
           className="absolute bottom-[18%] left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-gold/20 bg-beige px-3 py-2 shadow-premium transition hover:bg-gold-light sm:bottom-[20%] sm:gap-2.5 sm:px-4 sm:py-2.5"
         >
-          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#3897f0] text-[10px] font-bold text-white sm:h-6 sm:w-6 sm:text-xs">
-            ✓
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-gold text-background sm:h-6 sm:w-6">
+            <HiCheck className="text-[10px] sm:text-xs" />
           </span>
           <span className="text-left leading-tight">
             <span className="block text-[9px] text-background/60 sm:text-[10px]">

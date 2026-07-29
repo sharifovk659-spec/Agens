@@ -38,13 +38,13 @@ export default function Footer() {
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="relative h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full border border-gold/30 bg-black shadow-glow sm:h-[84px] sm:w-[84px]">
+              <span className="relative h-[71px] w-[71px] shrink-0 overflow-hidden rounded-full border border-gold/30 bg-black shadow-glow sm:h-[79px] sm:w-[79px]">
                 <Image
                   src={SITE.logo}
                   alt={SITE.name}
                   fill
-                  sizes="84px"
-                  className="scale-[1.65] object-cover object-[center_18%]"
+                  sizes="79px"
+                  className="scale-[1.35] object-cover object-[center_22%]"
                   quality={100}
                 />
               </span>
