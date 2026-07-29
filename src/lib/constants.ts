@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "Brand Boost",
-  tagline: "Social Media Agency",
+  name: "Qimat Agency",
+  tagline: "Marketing Agency",
   email: "hello@brandboost.ae",
   whatsapp: "https://wa.me/971504865709",
-  instagram: "https://instagram.com/brandboost",
+  instagram: "https://www.instagram.com/qimat.agency_/?hl=ru",
   phone: "+971 50 486 5709",
   phoneTel: "tel:+971504865709",
   logo: "/images/brand/logo.jpg",

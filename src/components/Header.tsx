@@ -43,14 +43,18 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-12">
-        <a href="#" className="relative block h-12 w-12 shrink-0 sm:h-14 sm:w-14" aria-label={SITE.name}>
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-12">
+        <a
+          href="#"
+          className="relative block h-14 w-14 shrink-0 sm:h-16 sm:w-16"
+          aria-label={SITE.name}
+        >
           <Image
             src={SITE.logo}
             alt={SITE.name}
             fill
-            sizes="56px"
-            className="rounded-full border border-gold/30 object-cover"
+            sizes="64px"
+            className="rounded-full border border-gold/25 object-cover object-center"
             priority
             quality={95}
           />
@@ -92,7 +96,7 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 top-16 z-40 overflow-y-auto bg-background/98 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 top-[72px] z-40 overflow-y-auto bg-background/98 backdrop-blur-xl lg:hidden"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
