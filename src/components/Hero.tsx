@@ -98,17 +98,17 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-7 flex w-full flex-col items-center justify-center sm:mt-8"
+          className="mt-7 flex justify-center sm:mt-8"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="relative mx-auto flex w-full max-w-lg flex-col items-stretch gap-3 rounded-2xl border border-gold/20 bg-background/90 px-4 py-4 shadow-premium backdrop-blur-xl sm:max-w-xl sm:flex-row sm:items-center sm:justify-center sm:gap-4 sm:px-6 sm:py-5">
+          <div className="relative inline-flex w-fit max-w-full flex-col items-stretch gap-3 rounded-2xl border border-gold/20 bg-background/92 px-3 py-3 shadow-premium backdrop-blur-xl sm:flex-row sm:items-center sm:gap-3 sm:px-4 sm:py-3.5">
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_center,rgba(200,155,92,0.08)_0%,transparent_72%)]" />
-            <Button href="#contact" className="relative z-[1] w-full sm:w-auto">
+            <Button href="#contact" className="relative z-[1] w-full whitespace-nowrap sm:w-auto">
               {t.cta}
             </Button>
-            <Button href="#cases" variant="outline" className="relative z-[1] w-full sm:w-auto">
+            <Button href="#cases" variant="outline" className="relative z-[1] w-full whitespace-nowrap sm:w-auto">
               {t.viewCases}
               <HiArrowRight />
             </Button>
