@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/context";
+import { SITE } from "@/lib/constants";
 import { FOUNDER } from "@/lib/founder";
 
 export default function FounderPhotoCard() {
@@ -35,7 +36,7 @@ export default function FounderPhotoCard() {
 
         {/* Instagram pill — overlaid on photo */}
         <a
-          href={FOUNDER.instagram}
+          href={SITE.instagram}
           target="_blank"
           rel="noopener noreferrer"
           className="absolute bottom-[18%] left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-gold/20 bg-beige px-3 py-2 shadow-premium transition hover:bg-gold-light sm:bottom-[20%] sm:gap-2.5 sm:px-4 sm:py-2.5"
@@ -48,7 +49,7 @@ export default function FounderPhotoCard() {
               {t.founder.myInstagram}
             </span>
             <span className="block text-xs font-bold text-background sm:text-sm">
-              {FOUNDER.handle.replace("@", "")}
+              {SITE.instagramHandle}
             </span>
           </span>
         </a>

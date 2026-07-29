@@ -1,8 +1,10 @@
+import { SITE } from "@/lib/constants";
+
 export const FOUNDER = {
   name: "Emir Gurbanov",
   role: "Founder & CEO",
-  instagram: "https://instagram.com/emir.socials",
-  handle: "@emir.socials",
+  instagram: SITE.instagram,
+  handle: `@${SITE.instagramHandle}`,
   photo: "/images/brand/founder.jpg",
   testimonial:
     "Starting a personal brand is never too late. I scaled mine into the best agency in Dubai — now our clients get 6 years of experience and real results.",

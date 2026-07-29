@@ -4,6 +4,7 @@ export const SITE = {
   email: "hello@brandboost.ae",
   whatsapp: "https://wa.me/971504865709",
   instagram: "https://www.instagram.com/qimat.agency_/?hl=ru",
+  instagramHandle: "qimat.agency_",
   phone: "+971 50 486 5709",
   phoneTel: "tel:+971504865709",
   logo: "/images/brand/logo.jpg",

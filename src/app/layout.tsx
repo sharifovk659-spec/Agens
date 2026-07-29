@@ -19,18 +19,18 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Brand Boost — Social Media Agency",
+  title: "Qimat Agency — Marketing Agency",
   description:
-    "We scale personal brands and businesses through social media. Premium social media marketing agency.",
+    "We scale personal brands and businesses through social media. Premium social media marketing agency in Dubai.",
   keywords: [
     "social media agency",
     "personal brand",
-    "brand boost",
+    "qimat agency",
     "instagram marketing",
     "content creation",
   ],
   openGraph: {
-    title: "Brand Boost — Social Media Agency",
+    title: "Qimat Agency — Marketing Agency",
     description:
       "We scale personal brands and businesses through social media.",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brand Boost — Social Media Agency",
+    title: "Qimat Agency — Marketing Agency",
     description:
       "We scale personal brands and businesses through social media.",
   },

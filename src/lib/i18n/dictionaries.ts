@@ -39,7 +39,7 @@ const en: Dictionary = {
   founder: {
     eyebrow: "Our founder",
     role: "Founder & CEO",
-    myInstagram: "My instagram",
+    myInstagram: "Agency Instagram",
     testimonial:
       "Starting a personal brand is never too late. I scaled mine into the best agency in Dubai — now our clients get 6 years of experience and real results.",
     achievements: {
@@ -242,7 +242,7 @@ const ru: Dictionary = {
   founder: {
     eyebrow: "Основатель",
     role: "Основатель и CEO",
-    myInstagram: "Мой Instagram",
+    myInstagram: "Instagram агентства",
     testimonial:
       "Начинать личный бренд никогда не поздно. Я вырастил свой до лучшего агентства в Дубае — теперь клиенты получают 6 лет опыта и реальные результаты.",
     achievements: {
@@ -441,7 +441,7 @@ const tj: Dictionary = {
   founder: {
     eyebrow: "Асосгузор",
     role: "Асосгузор ва CEO",
-    myInstagram: "Instagram-и ман",
+    myInstagram: "Instagram-и агентӣ",
     testimonial:
       "Оғоз кардани бренди шахсӣ ҳеҷ гоҳ дер нест. Ман бренди худро то беҳтарин агентӣ дар Дубай калон кардам — ҳоло муштариён 6 соли таҷриба ва натиҷаи воқеӣ мегиранд.",
     achievements: {
