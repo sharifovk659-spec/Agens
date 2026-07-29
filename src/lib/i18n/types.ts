@@ -57,6 +57,7 @@ export type Dictionary = {
     instagram: string;
     email: string;
     income: string;
+    incomePlaceholder: string;
     privacy: string;
     privacyLink: string;
     submit: string;

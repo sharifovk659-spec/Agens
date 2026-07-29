@@ -12,12 +12,12 @@ export default function MoneyLayer() {
           fill
           sizes="100vw"
           quality={85}
-          className="h-full w-full object-cover object-bottom brightness-[0.7] saturate-[0.85] sm:brightness-[0.78] sm:saturate-[0.88]"
+          className="h-full w-full object-cover object-bottom brightness-[0.82] saturate-[0.92] sm:brightness-[0.88] sm:saturate-[0.95]"
           priority
         />
-        <div className="absolute inset-0 bg-background/25 sm:bg-background/18" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/45 to-transparent sm:from-background/85 sm:via-background/35" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background/70 to-transparent sm:h-40 sm:h-48 sm:from-background/55" />
+        <div className="absolute inset-0 bg-background/14 sm:bg-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/78 via-background/32 to-transparent sm:from-background/72 sm:via-background/24" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background/55 to-transparent sm:h-40 sm:from-background/42" />
       </div>
 
       <div className="hidden sm:contents">
@@ -48,7 +48,7 @@ export default function MoneyLayer() {
                 alt=""
                 fill
                 sizes={`${bill.width}px`}
-                className="object-cover"
+                className="object-cover brightness-[0.92] saturate-[0.95]"
                 style={{ objectPosition: bill.objectPosition }}
                 loading="lazy"
               />

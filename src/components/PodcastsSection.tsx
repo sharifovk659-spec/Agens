@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
 import PodcastCard from "@/components/podcasts/PodcastCard";
-import InfiniteMarquee from "@/components/ui/InfiniteMarquee";
+import DualRowMarquee from "@/components/ui/DualRowMarquee";
 import { useLanguage } from "@/lib/i18n/context";
 import { PODCASTS } from "@/lib/podcasts";
 
@@ -33,11 +33,11 @@ export default function PodcastsSection() {
         </motion.div>
       </div>
 
-      <InfiniteMarquee speed={28} className="px-4 sm:px-6" pauseOnHover={false}>
+      <DualRowMarquee speed={28} className="px-4 sm:px-6">
         {PODCASTS.map((item, i) => (
           <PodcastCard key={item.id} item={item} index={i} />
         ))}
-      </InfiniteMarquee>
+      </DualRowMarquee>
     </section>
   );
 }

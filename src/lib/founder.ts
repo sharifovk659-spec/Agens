@@ -1,7 +1,7 @@
 import { SITE } from "@/lib/constants";
 
 export const FOUNDER = {
-  name: "Emir Gurbanov",
+  name: "Parviz Kholov",
   role: "Founder & CEO",
   instagram: SITE.instagram,
   handle: `@${SITE.instagramHandle}`,

@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import SiteLogo from "@/components/ui/SiteLogo";
 import { useLanguage } from "@/lib/i18n/context";
 import { SITE } from "@/lib/constants";
 
@@ -44,20 +44,8 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:h-[88px] sm:px-6 lg:px-12">
-        <a
-          href="#"
-          className="relative block h-[71px] w-[71px] shrink-0 overflow-hidden rounded-full border border-gold/30 bg-black shadow-glow sm:h-[79px] sm:w-[79px]"
-          aria-label={SITE.name}
-        >
-          <Image
-            src={SITE.logo}
-            alt={SITE.name}
-            fill
-            sizes="79px"
-            className="scale-[1.35] object-cover object-[center_22%]"
-            priority
-            quality={100}
-          />
+        <a href="#" aria-label={SITE.name}>
+          <SiteLogo priority />
         </a>
 
         <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">

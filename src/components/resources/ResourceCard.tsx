@@ -23,7 +23,7 @@ export default function ResourceCard({ item, index }: ResourceCardProps) {
       href={item.href}
       target={item.href.startsWith("http") ? "_blank" : undefined}
       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-      className="group relative w-[240px] shrink-0 overflow-hidden rounded-2xl border border-gold/15 bg-card-gradient shadow-card transition-[border-color,box-shadow] duration-300 hover:border-gold/35 hover:shadow-premium sm:w-[300px] lg:w-[360px]"
+      className="group relative w-[240px] shrink-0 overflow-hidden rounded-2xl border border-gold/15 bg-card-gradient shadow-card transition-[border-color,box-shadow,transform] duration-500 hover:-translate-y-1 hover:border-gold/40 hover:shadow-glow sm:w-[300px] lg:w-[360px]"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -35,14 +35,21 @@ export default function ResourceCard({ item, index }: ResourceCardProps) {
           alt={copy.title}
           fill
           sizes="(max-width: 640px) 240px, 360px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.1]"
           loading="lazy"
           quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          aria-hidden
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,155,92,0.2)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-gold/25" />
+        </div>
       </div>
 
-      <div className="p-4 sm:p-5">
+      <div className="p-4 transition-all duration-500 group-hover:max-h-0 group-hover:translate-y-2 group-hover:overflow-hidden group-hover:opacity-0 group-hover:py-0 sm:p-5">
         <div className="mb-2 flex items-start justify-between gap-2 sm:gap-3">
           <h3 className="text-sm font-bold leading-snug text-gold sm:text-base sm:text-lg">
             {copy.title}

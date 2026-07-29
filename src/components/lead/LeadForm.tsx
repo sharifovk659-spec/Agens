@@ -147,28 +147,20 @@ export default function LeadForm() {
         </Field>
 
         <Field label={t.contact.income} error={errors.income}>
-          <div className="space-y-2">
+          <select
+            value={form.income}
+            onChange={(e) => handleChange("income", e.target.value)}
+            className="w-full"
+          >
+            <option value="" disabled>
+              {t.contact.incomePlaceholder}
+            </option>
             {t.contact.incomeOptions.map((option) => (
-              <label
-                key={option}
-                className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3 py-2.5 text-sm transition duration-300 ${
-                  form.income === option
-                    ? "border-gold/50 bg-gold/10 font-medium text-beige"
-                    : "border-gold/20 bg-background/40 text-beige-muted hover:border-gold/35"
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="income"
-                  value={option}
-                  checked={form.income === option}
-                  onChange={(e) => handleChange("income", e.target.value)}
-                  className="accent-gold"
-                />
-                <span className="min-w-0 break-words">{option}</span>
-              </label>
+              <option key={option} value={option}>
+                {option}
+              </option>
             ))}
-          </div>
+          </select>
         </Field>
 
         <div>

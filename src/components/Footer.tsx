@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+import SiteLogo from "@/components/ui/SiteLogo";
 import { useLanguage } from "@/lib/i18n/context";
 import { SITE } from "@/lib/constants";
 
@@ -38,16 +39,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="relative h-[71px] w-[71px] shrink-0 overflow-hidden rounded-full border border-gold/30 bg-black shadow-glow sm:h-[79px] sm:w-[79px]">
-                <Image
-                  src={SITE.logo}
-                  alt={SITE.name}
-                  fill
-                  sizes="79px"
-                  className="scale-[1.35] object-cover object-[center_22%]"
-                  quality={100}
-                />
-              </span>
+              <SiteLogo />
               <div className="min-w-0">
                 <p className="font-display text-xl font-bold tracking-wide text-beige sm:text-2xl">
                   {SITE.name}
@@ -116,12 +108,12 @@ export default function Footer() {
           <p>
             {t.footer.credit}{" "}
             <a
-              href="https://yadgarov.dev"
+              href="https://webdushanbe.tj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold transition-colors hover:text-gold-light"
             >
-              yadgarov.dev
+              webdushanbe.tj
             </a>
           </p>
         </div>

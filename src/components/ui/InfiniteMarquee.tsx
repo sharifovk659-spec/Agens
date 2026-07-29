@@ -5,6 +5,7 @@ import { Children, useEffect, useRef, useState } from "react";
 type InfiniteMarqueeProps = {
   children: React.ReactNode;
   speed?: number;
+  direction?: "left" | "right";
   className?: string;
   /** Default false — continuous motion, no empty pause at the end */
   pauseOnHover?: boolean;
@@ -13,6 +14,7 @@ type InfiniteMarqueeProps = {
 export default function InfiniteMarquee({
   children,
   speed = 40,
+  direction = "left",
   className = "",
   pauseOnHover = false,
 }: InfiniteMarqueeProps) {
@@ -51,7 +53,7 @@ export default function InfiniteMarquee({
     if (!track || !group) return;
 
     let raf = 0;
-    let x = 0;
+    let x = direction === "right" ? -group.getBoundingClientRect().width : 0;
     let paused = false;
     let last = performance.now();
 
@@ -61,9 +63,13 @@ export default function InfiniteMarquee({
       if (!paused) {
         const loopW = group.getBoundingClientRect().width;
         if (loopW > 0) {
-          x -= speed * dt;
-          // Wrap without jump — never leave an empty trail
-          while (x <= -loopW) x += loopW;
+          if (direction === "left") {
+            x -= speed * dt;
+            while (x <= -loopW) x += loopW;
+          } else {
+            x += speed * dt;
+            while (x >= 0) x -= loopW;
+          }
           track.style.transform = `translate3d(${x}px,0,0)`;
         }
       }
@@ -88,7 +94,7 @@ export default function InfiniteMarquee({
       track.removeEventListener("pointerenter", onEnter);
       track.removeEventListener("pointerleave", onLeave);
     };
-  }, [speed, pauseOnHover, copies]);
+  }, [speed, pauseOnHover, copies, direction]);
 
   return (
     <div ref={viewportRef} className={`marquee-mask relative overflow-hidden ${className}`}>

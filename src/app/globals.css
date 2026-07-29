@@ -36,7 +36,21 @@
   input,
   select,
   textarea {
-    @apply rounded-xl border border-gold/20 bg-background/60 px-4 py-3 text-sm text-beige backdrop-blur-sm outline-none transition duration-300 placeholder:text-beige-muted/40 focus:border-gold/50;
+    @apply rounded-xl border border-gold/20 bg-dark px-4 py-3 text-sm text-beige outline-none transition duration-300 placeholder:text-beige-muted/40 focus:border-gold/50;
+  }
+
+  select {
+    @apply cursor-pointer appearance-none bg-dark;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c89b5c' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+  }
+
+  select option {
+    background-color: #0d0b08;
+    color: #e7c99a;
   }
 }
 

@@ -25,20 +25,28 @@ export default function CaseCard({ item, index }: CaseCardProps) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: Math.min(index, 6) * 0.05 }}
     >
-      <div className="relative aspect-[9/16] overflow-hidden rounded-[22px] border border-gold/15 bg-dark shadow-card transition-shadow duration-300 group-hover:border-gold/30 group-hover:shadow-premium sm:rounded-[28px]">
+      <div className="relative aspect-[9/16] overflow-hidden rounded-[22px] border border-gold/15 bg-dark shadow-card transition-[border-color,box-shadow,transform] duration-500 group-hover:-translate-y-1 group-hover:border-gold/45 group-hover:shadow-glow sm:rounded-[28px]">
         <Image
           src={item.image}
           alt={copy.name}
           fill
           sizes="(max-width: 640px) 180px, 270px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.12]"
           loading="lazy"
           quality={95}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/35 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
-        <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 sm:p-5">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          aria-hidden
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,155,92,0.22)_0%,transparent_68%)]" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-gold/30" />
+        </div>
+
+        <div className="absolute inset-x-0 bottom-0 p-3 transition-all duration-500 group-hover:translate-y-6 group-hover:opacity-0 sm:p-4 sm:p-5">
           <div className="mb-1.5 flex flex-wrap gap-1 sm:mb-2 sm:gap-1.5">
             {item.tags.map((tag) => (
               <span
