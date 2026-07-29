@@ -53,7 +53,7 @@ export default function Hero() {
       ))}
 
       <div className="relative z-[10] mx-auto w-full max-w-4xl px-4 pb-10 pt-24 text-center sm:px-8 sm:pb-12 sm:pt-32 lg:px-12">
-        <div className="pointer-events-none absolute inset-x-0 top-[22%] bottom-[4%] -z-10 rounded-[32px] bg-[radial-gradient(ellipse_at_center,rgba(6,5,4,0.72)_0%,rgba(6,5,4,0.35)_50%,transparent_75%)] sm:inset-x-[-4%]" />
+        <div className="pointer-events-none absolute inset-x-0 top-[18%] bottom-[38%] -z-10 mx-auto max-w-3xl rounded-[32px] bg-[radial-gradient(ellipse_at_center,rgba(6,5,4,0.72)_0%,rgba(6,5,4,0.35)_50%,transparent_75%)]" />
 
         <motion.p
           className="eyebrow mb-3 px-2 sm:mb-4"
@@ -103,10 +103,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button href="#contact" className="whitespace-nowrap">
+          <Button href="#contact" className="whitespace-nowrap shadow-premium">
             {t.cta}
           </Button>
-          <Button href="#cases" variant="outline" className="whitespace-nowrap">
+          <Button
+            href="#cases"
+            variant="outline"
+            className="whitespace-nowrap border-gold/50 bg-background shadow-premium hover:bg-background"
+          >
             {t.viewCases}
             <HiArrowRight />
           </Button>

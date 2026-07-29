@@ -22,13 +22,6 @@ export const AGENCY_CASES: AgencyCase[] = [
     image: "/images/clinic/dentistry.jpg",
   },
   {
-    id: "price-list",
-    name: "Service List",
-    result: "Clear offer presentation that converts viewers into clients",
-    tags: ["Offer", "Sales"],
-    image: "/images/clinic/list.jpg",
-  },
-  {
     id: "before-after",
     name: "Before & After",
     result: "Transformation content that builds trust and social proof",

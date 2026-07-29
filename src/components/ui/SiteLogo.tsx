@@ -8,7 +8,7 @@ type SiteLogoProps = {
   priority?: boolean;
 };
 
-/** Sharp circular logo — less zoom, readable at native quality */
+/** Sharp circular logo — zoomed in, native quality */
 export default function SiteLogo({
   className = "h-[82px] w-[82px] sm:h-[92px] sm:w-[92px]",
   priority = false,
@@ -23,7 +23,7 @@ export default function SiteLogo({
         width={1024}
         height={1024}
         unoptimized
-        className="h-full w-full object-contain object-center p-[9px] sm:p-[10px]"
+        className="h-full w-full object-contain object-center p-[3px] sm:p-1"
         priority={priority}
       />
     </span>
