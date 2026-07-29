@@ -70,9 +70,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          BRAND
+          QIMAT
           <br />
-          <span className="text-gradient-gold">BOOST</span>
+          <span className="text-gradient-gold">AGENCY</span>
         </motion.h1>
 
         <motion.div
