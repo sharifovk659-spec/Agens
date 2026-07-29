@@ -20,7 +20,7 @@ export default function PodcastsSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="section-heading text-3xl sm:text-4xl lg:text-5xl">
-            Podcasts with our clients
+            Client reels
           </h2>
           <p className="mt-3 flex items-center gap-2 text-sm text-muted sm:text-base">
             Scroll to explore

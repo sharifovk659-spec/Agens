@@ -7,11 +7,16 @@ import { FaPlay } from "react-icons/fa";
 type LazyYouTubeProps = {
   videoId: string;
   title: string;
+  short?: boolean;
 };
 
-export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
+export default function LazyYouTube({
+  videoId,
+  title,
+  short = false,
+}: LazyYouTubeProps) {
   const [playing, setPlaying] = useState(false);
-  const thumbnail = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+  const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
   if (playing) {
     return (
@@ -31,7 +36,9 @@ export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
     <button
       type="button"
       onClick={() => setPlaying(true)}
-      className="group relative aspect-video w-full overflow-hidden rounded-xl bg-dark-800"
+      className={`group relative w-full overflow-hidden rounded-xl bg-dark ${
+        short ? "aspect-[9/16]" : "aspect-video"
+      }`}
       aria-label={`Play: ${title}`}
     >
       <Image
@@ -41,10 +48,11 @@ export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
         sizes="(max-width: 640px) 85vw, 360px"
         className="object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
+        unoptimized
       />
-      <div className="absolute inset-0 bg-dark-900/20 transition group-hover:bg-dark-900/10" />
-      <div className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-red-600 shadow-lg transition-transform group-hover:scale-110">
-        <FaPlay className="ml-1 text-white" />
+      <div className="absolute inset-0 bg-background/25 transition group-hover:bg-background/10" />
+      <div className="absolute left-1/2 top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/40 bg-background/70 shadow-play backdrop-blur-sm transition-transform group-hover:scale-110">
+        <FaPlay className="ml-1 text-gold" />
       </div>
     </button>
   );
