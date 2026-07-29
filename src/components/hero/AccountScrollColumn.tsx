@@ -9,7 +9,8 @@ export default function AccountScrollColumn({
   images,
   side,
 }: AccountScrollColumnProps) {
-  const items = [...images, ...images];
+  // Triple the list so CSS -33.333% loop never shows an empty gap
+  const items = [...images, ...images, ...images];
 
   return (
     <div

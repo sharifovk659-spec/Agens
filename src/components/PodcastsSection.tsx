@@ -33,7 +33,7 @@ export default function PodcastsSection() {
         </motion.div>
       </div>
 
-      <InfiniteMarquee speed={28} className="px-4 sm:px-6" pauseOnHover>
+      <InfiniteMarquee speed={28} className="px-4 sm:px-6" pauseOnHover={false}>
         {PODCASTS.map((item, i) => (
           <PodcastCard key={item.id} item={item} index={i} />
         ))}

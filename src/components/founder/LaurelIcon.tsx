@@ -1,27 +1,29 @@
 type LaurelIconProps = {
   className?: string;
+  side?: "left" | "right";
 };
 
-export default function LaurelIcon({ className = "" }: LaurelIconProps) {
+/** Side laurel branch — sample lime via currentColor */
+export default function LaurelIcon({ className = "", side = "left" }: LaurelIconProps) {
   return (
     <svg
-      viewBox="0 0 48 24"
-      fill="none"
+      viewBox="0 0 28 56"
+      fill="currentColor"
       aria-hidden
-      className={className}
+      className={`${className} ${side === "right" ? "-scale-x-100" : ""}`}
     >
+      <path d="M18 2c-1.2 4.5-4.8 8.2-9.5 10.2 3.8 1.2 6.8 4.2 8.2 7.8-4.5-1.5-8.5.2-11.2 3.5 3.5 1.8 6 5 7.2 8.5-4.2-1-7.8.8-10.2 3.8 3.2 2 5.5 5.2 6.5 8.8-3.5-.6-6.5 1.2-8.5 4 2.8 2.2 4.8 5.5 5.5 9.2 5.5-6.5 12.5-16 12-35.8z" />
       <path
-        d="M4 14c2-6 6-10 10-12M8 16c1.5-4 4-7 7-9M44 14c-2-6-6-10-10-12M40 16c-1.5-4-4-7-7-9"
-        stroke="currentColor"
-        strokeWidth="1.2"
-        strokeLinecap="round"
+        d="M20 6c-.8 3.5-3.2 6.2-6.5 7.8 2.8 1.2 5 3.5 6 6.5-3.2-1-6 .2-8 2.8 2.5 1.5 4.2 4 5 7-3-.8-5.5.5-7.2 2.8 2.2 1.5 3.8 4 4.5 6.8"
+        opacity="0.55"
       />
       <path
-        d="M14 20c2-1 4-1.5 6-1.5s4 .5 6 1.5M18 22h12"
+        d="M12 4c1.5 8 2 18 1.2 28"
+        fill="none"
         stroke="currentColor"
-        strokeWidth="1"
+        strokeWidth="1.4"
         strokeLinecap="round"
-        opacity="0.5"
+        opacity="0.85"
       />
     </svg>
   );

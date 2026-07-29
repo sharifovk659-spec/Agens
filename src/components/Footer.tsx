@@ -38,14 +38,14 @@ export default function Footer() {
         <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-gold/25 sm:h-16 sm:w-16">
+              <span className="relative h-[58px] w-[88px] shrink-0 overflow-hidden rounded-2xl border border-gold/30 bg-black sm:h-[64px] sm:w-[100px]">
                 <Image
                   src={SITE.logo}
                   alt={SITE.name}
                   fill
-                  sizes="64px"
-                  className="object-cover object-center"
-                  quality={95}
+                  sizes="100px"
+                  className="object-contain object-center p-1"
+                  quality={100}
                 />
               </span>
               <div className="min-w-0">

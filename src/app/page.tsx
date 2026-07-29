@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import StatsSection from "@/components/StatsSection";
 import ResultsGrid from "@/components/ResultsGrid";
 import FounderSection from "@/components/FounderSection";
 import AgencyCases from "@/components/AgencyCases";
@@ -15,7 +14,6 @@ export default function Home() {
     <main className="bg-background">
       <Header />
       <Hero />
-      <StatsSection />
       <ResultsGrid />
       <FounderSection />
       <AgencyCases />

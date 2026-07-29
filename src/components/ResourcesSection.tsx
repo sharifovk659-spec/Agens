@@ -41,7 +41,7 @@ export default function ResourcesSection() {
         </motion.div>
       </div>
 
-      <InfiniteMarquee speed={32} className="px-4 sm:px-8 lg:px-12" pauseOnHover>
+      <InfiniteMarquee speed={32} className="px-4 sm:px-8 lg:px-12" pauseOnHover={false}>
         {RESOURCES.map((item, i) => (
           <ResourceCard key={item.id} item={item} index={i} />
         ))}

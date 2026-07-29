@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HiArrowRight } from "react-icons/hi";
+import { HiCheck } from "react-icons/hi";
 import AchievementBadge from "@/components/founder/AchievementBadge";
 import FounderPhotoCard from "@/components/founder/FounderPhotoCard";
 import Button from "@/components/ui/Button";
@@ -17,7 +17,7 @@ export default function FounderSection() {
       <div className="absolute inset-0 bg-radial-glow opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
-        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+        <div className="grid items-start gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
           <FounderPhotoCard />
 
           <div className="min-w-0">
@@ -32,22 +32,24 @@ export default function FounderSection() {
               <p className="mt-2 text-sm text-muted sm:text-base">{t.founder.role}</p>
             </motion.div>
 
-            <div className="mt-6 grid grid-cols-2 gap-2.5 sm:mt-8 sm:gap-4 lg:mt-10">
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-5 lg:mt-10">
               {FOUNDER_ACHIEVEMENTS.map((item, i) => (
                 <AchievementBadge key={item.id} item={item} index={i} />
               ))}
             </div>
 
             <motion.div
-              className="mt-6 sm:mt-8 lg:mt-10"
+              className="mt-6 flex justify-stretch sm:mt-8 sm:justify-end lg:mt-10"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.4 }}
             >
               <Button href="#contact" className="w-full sm:w-auto">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-background">
+                  <HiCheck className="text-sm text-gold" />
+                </span>
                 {t.cta}
-                <HiArrowRight className="text-lg" />
               </Button>
             </motion.div>
           </div>

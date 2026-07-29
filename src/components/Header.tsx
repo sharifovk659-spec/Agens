@@ -43,20 +43,20 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-12">
+      <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:h-[88px] sm:px-6 lg:px-12">
         <a
           href="#"
-          className="relative block h-14 w-14 shrink-0 sm:h-16 sm:w-16"
+          className="relative block h-[58px] w-[88px] shrink-0 overflow-hidden rounded-2xl border border-gold/30 bg-black sm:h-[64px] sm:w-[100px]"
           aria-label={SITE.name}
         >
           <Image
             src={SITE.logo}
             alt={SITE.name}
             fill
-            sizes="64px"
-            className="rounded-full border border-gold/25 object-cover object-center"
+            sizes="100px"
+            className="object-contain object-center p-1"
             priority
-            quality={95}
+            quality={100}
           />
         </a>
 

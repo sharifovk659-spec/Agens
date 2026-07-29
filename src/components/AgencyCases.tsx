@@ -33,7 +33,7 @@ export default function AgencyCases() {
         </motion.div>
       </div>
 
-      <InfiniteMarquee speed={36} className="px-4 sm:px-6">
+      <InfiniteMarquee speed={36} className="px-4 sm:px-6" pauseOnHover={false}>
         {AGENCY_CASES.map((item, i) => (
           <CaseCard key={item.id} item={item} index={i} />
         ))}

@@ -25,6 +25,7 @@ export type Dictionary = {
   founder: {
     eyebrow: string;
     role: string;
+    myInstagram: string;
     testimonial: string;
     achievements: Record<string, string>;
   };

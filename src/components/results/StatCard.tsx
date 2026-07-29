@@ -13,11 +13,9 @@ type StatCardProps = {
 function IconBox({
   icon: Icon,
   position,
-  featured = false,
 }: {
   icon: StatItem["icon"];
   position: StatItem["iconPosition"];
-  featured?: boolean;
 }) {
   const pos =
     position === "bottom-left"
@@ -26,11 +24,7 @@ function IconBox({
 
   return (
     <div
-      className={`absolute flex h-8 w-8 items-center justify-center rounded-xl sm:h-9 sm:w-9 ${
-        featured
-          ? "relative mb-0 bg-gold/10 text-gold"
-          : `bg-gold/[0.06] text-gold/70 ${pos}`
-      }`}
+      className={`absolute flex h-9 w-9 items-center justify-center rounded-2xl bg-gold/[0.08] text-gold/80 sm:h-10 sm:w-10 ${pos}`}
     >
       <Icon className="text-sm sm:text-base" />
     </div>
@@ -75,35 +69,35 @@ export default function StatCard({ stat, index }: StatCardProps) {
 
     return (
       <motion.article
-        className={`@container relative flex min-h-[260px] flex-col items-center justify-between overflow-hidden rounded-[24px] border border-gold/20 bg-card-gradient px-3 py-6 text-center shadow-glow sm:min-h-[360px] sm:rounded-[28px] sm:px-6 sm:py-8 ${stat.gridClass}`}
+        className={`@container relative flex min-h-[280px] flex-col items-center justify-between overflow-hidden rounded-[28px] border border-gold/40 bg-gold-gradient px-4 py-7 text-center shadow-glow sm:min-h-[380px] sm:rounded-[36px] sm:px-7 sm:py-9 ${stat.gridClass}`}
         initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5, delay: index * 0.05 }}
       >
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-gold/10 text-gold sm:h-11 sm:w-11">
-          <Icon className="text-lg sm:text-xl" />
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-background/15 text-background sm:h-12 sm:w-12">
+          <Icon className="text-xl sm:text-2xl" />
         </div>
 
         <div className="flex w-full max-w-full flex-1 flex-col items-center justify-center px-1 py-3 sm:py-4">
           <p
-            className="w-full break-words font-serif font-bold leading-[1.05] tracking-tight text-gold"
-            style={{ fontSize: "clamp(1.2rem, 9cqi, 2.5rem)" }}
+            className="w-full break-words font-display font-bold leading-[1.05] tracking-tight text-background"
+            style={{ fontSize: "clamp(1.35rem, 9cqi, 2.65rem)" }}
           >
             <span className="block">{line1}</span>
             {line2 && <span className="block">{line2}</span>}
           </p>
-          <p className="mt-2 w-full max-w-[240px] text-xs leading-relaxed text-muted sm:mt-3 sm:text-sm sm:text-[15px]">
+          <p className="mt-2 w-full max-w-[260px] text-xs leading-relaxed text-background/75 sm:mt-3 sm:text-sm sm:text-[15px]">
             {label}
           </p>
         </div>
 
         <a
           href="#contact"
-          className="inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-xl border border-gold/30 bg-gold px-4 py-2.5 text-[10px] font-bold uppercase tracking-widest text-background shadow-cta transition-opacity hover:bg-gold-light sm:gap-2.5 sm:px-5 sm:py-3 sm:text-xs sm:text-sm"
+          className="inline-flex w-full max-w-[300px] items-center justify-center gap-2 rounded-2xl border border-background/20 bg-background px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gold shadow-premium transition-opacity hover:bg-dark sm:gap-2.5 sm:px-5 sm:py-3.5 sm:text-xs sm:text-sm"
         >
-          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-background sm:h-6 sm:w-6">
-            <HiCheck className="text-xs text-gold sm:text-sm" />
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold sm:h-6 sm:w-6">
+            <HiCheck className="text-xs text-background sm:text-sm" />
           </span>
           <span className="truncate">{t.results.startCta}</span>
         </a>
@@ -116,8 +110,8 @@ export default function StatCard({ stat, index }: StatCardProps) {
 
   return (
     <motion.article
-      className={`group relative flex overflow-hidden rounded-[24px] border border-gold/10 bg-card-gradient p-4 shadow-card sm:rounded-[28px] sm:p-6 ${
-        isTop3 ? "min-h-[200px] lg:min-h-[260px]" : "min-h-[140px] sm:min-h-[165px]"
+      className={`group relative flex overflow-hidden rounded-[28px] border border-gold/10 bg-card-gradient p-4 shadow-card sm:rounded-[36px] sm:p-6 ${
+        isTop3 ? "min-h-[200px] lg:min-h-[280px]" : "min-h-[150px] sm:min-h-[170px]"
       } ${stat.gridClass}`}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -130,12 +124,12 @@ export default function StatCard({ stat, index }: StatCardProps) {
       <div
         className={`flex h-full w-full flex-col ${
           isTop3 ? "justify-start pb-8 sm:pb-10" : "justify-end"
-        } ${iconPosition === "bottom-left" ? (isTop3 ? "pt-1" : "pb-10 sm:pb-12") : "pr-9 sm:pr-11"}`}
+        } ${iconPosition === "bottom-left" ? (isTop3 ? "pt-1" : "pb-10 sm:pb-12") : "pr-10 sm:pr-12"}`}
       >
         {isTop3 ? (
           <>
-            <p className="text-xs font-semibold leading-snug text-gold sm:text-sm sm:text-[15px]">
-              <span className="text-2xl font-extrabold sm:text-3xl">{value}</span>{" "}
+            <p className="text-xs font-semibold leading-snug text-beige sm:text-sm sm:text-[15px]">
+              <span className="text-2xl font-extrabold text-gold sm:text-3xl">{value}</span>{" "}
               {label}
             </p>
             {subLabel && (
@@ -154,17 +148,17 @@ export default function StatCard({ stat, index }: StatCardProps) {
 
             {isSales ? (
               <div className="leading-tight">
-                <p className="text-[clamp(1.2rem,4vw,1.85rem)] font-extrabold text-gold">
+                <p className="text-[clamp(1.25rem,4vw,1.9rem)] font-extrabold text-gold">
                   {value}
                 </p>
                 {valueSuffix && (
-                  <p className="text-[clamp(1rem,3.5vw,1.5rem)] font-extrabold text-gold">
+                  <p className="text-[clamp(1rem,3.5vw,1.55rem)] font-extrabold text-gold">
                     {valueSuffix}
                   </p>
                 )}
               </div>
             ) : (
-              <p className="text-[clamp(1.2rem,4vw,2rem)] font-extrabold leading-tight text-gold">
+              <p className="text-[clamp(1.25rem,4vw,2.05rem)] font-extrabold leading-tight text-gold">
                 {value}
               </p>
             )}
