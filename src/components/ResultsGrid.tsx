@@ -10,7 +10,7 @@ export default function ResultsGrid() {
       <div className="absolute inset-0 bg-radial-glow opacity-30" />
 
       <div className="relative z-[2] mx-auto max-w-5xl px-4 sm:px-6">
-        <div className="grid grid-cols-1 gap-3 sm:gap-3.5 lg:grid-cols-3 lg:grid-rows-3 lg:gap-3.5">
+        <div className="grid grid-cols-1 gap-2.5 sm:gap-3.5 lg:grid-cols-3 lg:grid-rows-3 lg:gap-3.5">
           {STATS.map((stat, i) => (
             <StatCard key={stat.id} stat={stat} index={i} />
           ))}

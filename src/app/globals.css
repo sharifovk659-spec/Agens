@@ -131,6 +131,16 @@
   }
 }
 
+.marquee-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
 .instagram-scroll-column-up {
   animation: scroll-up 28s linear infinite;
   will-change: transform;

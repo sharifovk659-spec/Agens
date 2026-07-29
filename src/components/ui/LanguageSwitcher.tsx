@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import type { Lang } from "@/lib/constants";
+import { useLanguage } from "@/lib/i18n/context";
+import type { Lang } from "@/lib/i18n/types";
 
 const LANGS: { id: Lang; label: string }[] = [
   { id: "ru", label: "RU" },
@@ -10,7 +10,7 @@ const LANGS: { id: Lang; label: string }[] = [
 ];
 
 export default function LanguageSwitcher() {
-  const [active, setActive] = useState<Lang>("en");
+  const { lang, setLang } = useLanguage();
 
   return (
     <div className="flex items-center rounded-full border border-gold/25 bg-background/40 p-1">
@@ -18,9 +18,9 @@ export default function LanguageSwitcher() {
         <button
           key={id}
           type="button"
-          onClick={() => setActive(id)}
+          onClick={() => setLang(id)}
           className={`rounded-full px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 xl:px-3 xl:text-xs ${
-            active === id
+            lang === id
               ? "bg-gold/20 text-gold"
               : "text-beige-muted hover:text-beige"
           }`}

@@ -3,7 +3,7 @@ export const FOUNDER = {
   role: "Founder & CEO",
   instagram: "https://instagram.com/emir.socials",
   handle: "@emir.socials",
-  photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop&fm=webp",
+  photo: "/images/brand/founder.jpg",
   testimonial:
     "Starting a personal brand is never too late. I scaled mine into the best agency in Dubai — now our clients get 6 years of experience and real results.",
 } as const;

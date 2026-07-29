@@ -4,8 +4,6 @@ export type AgencyCase = {
   result: string;
   tags: string[];
   image: string;
-  video?: boolean;
-  videoId?: string;
 };
 
 export const AGENCY_CASES: AgencyCase[] = [
@@ -15,8 +13,6 @@ export const AGENCY_CASES: AgencyCase[] = [
     result: "Premium visual identity and content cover for clinic positioning",
     tags: ["Cover", "Brand"],
     image: "/images/clinic/cover.jpg",
-    video: true,
-    videoId: "UPaq2ExX-JQ",
   },
   {
     id: "dentistry",
@@ -24,8 +20,6 @@ export const AGENCY_CASES: AgencyCase[] = [
     result: "Full content system for dentistry — trust, leads and bookings",
     tags: ["Dentistry", "Leads"],
     image: "/images/clinic/dentistry.jpg",
-    video: true,
-    videoId: "JoKILpmHkFI",
   },
   {
     id: "price-list",
@@ -40,8 +34,6 @@ export const AGENCY_CASES: AgencyCase[] = [
     result: "Transformation content that builds trust and social proof",
     tags: ["Results", "Proof"],
     image: "/images/clinic/before-after.jpg",
-    video: true,
-    videoId: "4KsbbkYA79I",
   },
   {
     id: "before-after-main",

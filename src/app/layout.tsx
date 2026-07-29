@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import FloatingContact from "@/components/FloatingContact";
+import Providers from "@/components/Providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "We scale personal brands and businesses through social media.",
     type: "website",
-    locale: "en_US",
+    locale: "ru_RU",
   },
   twitter: {
     card: "summary_large_image",
@@ -44,16 +45,24 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
-      <body className="font-sans">
-        {children}
-        <FloatingContact />
+    <html lang="ru" className={`${inter.variable} ${cormorant.variable}`}>
+      <body className="overflow-x-hidden font-sans">
+        <Providers>
+          {children}
+          <FloatingContact />
+        </Providers>
       </body>
     </html>
   );

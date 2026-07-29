@@ -18,7 +18,7 @@ const ACTIONS = [
 
 export default function FloatingContact() {
   return (
-    <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3 sm:bottom-8 sm:right-6">
+    <div className="fixed bottom-5 right-3 z-50 flex flex-col gap-2.5 sm:bottom-8 sm:right-6 sm:gap-3">
       {ACTIONS.map(({ id, href, icon: Icon, label }, i) => (
         <motion.a
           key={id}

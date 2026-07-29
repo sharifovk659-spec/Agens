@@ -6,6 +6,7 @@ export const SITE = {
   instagram: "https://instagram.com/brandboost",
   phone: "+971 50 486 5709",
   phoneTel: "tel:+971504865709",
+  logo: "/images/brand/logo.jpg",
 } as const;
 
 export const NAV_LINKS = [

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { HiArrowUpRight } from "react-icons/hi2";
+import { useLanguage } from "@/lib/i18n/context";
 import type { Resource } from "@/lib/resources";
 
 type ResourceCardProps = {
@@ -11,40 +12,46 @@ type ResourceCardProps = {
 };
 
 export default function ResourceCard({ item, index }: ResourceCardProps) {
+  const { t } = useLanguage();
+  const copy = t.resources.items[item.id] ?? {
+    title: item.title,
+    description: item.description,
+  };
+
   return (
     <motion.a
       href={item.href}
       target={item.href.startsWith("http") ? "_blank" : undefined}
       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-      className="card-hover group relative flex min-h-[180px] flex-col p-5 sm:p-6"
-      initial={{ opacity: 0, y: 28 }}
+      className="group relative w-[240px] shrink-0 overflow-hidden rounded-2xl border border-gold/15 bg-card-gradient shadow-card transition-[border-color,box-shadow] duration-300 hover:border-gold/35 hover:shadow-premium sm:w-[300px] lg:w-[360px]"
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.45, delay: index * 0.08 }}
+      transition={{ duration: 0.45, delay: Math.min(index, 4) * 0.06 }}
     >
-      <div className="mb-3 flex items-center gap-2.5">
-        <span className="text-sm text-gold">◇</span>
-        <h3 className="text-base font-bold text-gold sm:text-lg">{item.title}</h3>
-      </div>
-
-      <p className="flex-1 text-xs leading-relaxed text-beige-muted sm:text-sm">
-        {item.description}
-      </p>
-
-      <span className="mt-4 flex justify-end text-beige-muted transition-colors duration-300 group-hover:text-gold">
-        <HiArrowUpRight className="text-lg" />
-      </span>
-
-      <div className="relative mt-4 hidden aspect-[16/10] overflow-hidden rounded-xl border border-gold/15 sm:block">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <Image
           src={item.image}
-          alt=""
+          alt={copy.title}
           fill
-          sizes="(max-width: 640px) 100vw, 50vw"
-          className="object-cover object-top opacity-70 transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 240px, 360px"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          quality={95}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+      </div>
+
+      <div className="p-4 sm:p-5">
+        <div className="mb-2 flex items-start justify-between gap-2 sm:gap-3">
+          <h3 className="text-sm font-bold leading-snug text-gold sm:text-base sm:text-lg">
+            {copy.title}
+          </h3>
+          <HiArrowUpRight className="mt-0.5 shrink-0 text-base text-beige-muted transition-colors group-hover:text-gold sm:text-lg" />
+        </div>
+        <p className="line-clamp-3 text-[11px] leading-relaxed text-beige-muted sm:text-xs sm:text-sm">
+          {copy.description}
+        </p>
       </div>
     </motion.a>
   );
