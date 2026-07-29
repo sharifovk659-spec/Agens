@@ -46,15 +46,15 @@ export default function Header() {
       <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-4 sm:h-[88px] sm:px-6 lg:px-12">
         <a
           href="#"
-          className="relative block h-[58px] w-[88px] shrink-0 overflow-hidden rounded-2xl border border-gold/30 bg-black sm:h-[64px] sm:w-[100px]"
+          className="relative block h-[76px] w-[76px] shrink-0 overflow-hidden rounded-full border border-gold/30 bg-black shadow-glow sm:h-[84px] sm:w-[84px]"
           aria-label={SITE.name}
         >
           <Image
             src={SITE.logo}
             alt={SITE.name}
             fill
-            sizes="100px"
-            className="object-contain object-center p-1"
+            sizes="84px"
+            className="scale-[1.65] object-cover object-[center_18%]"
             priority
             quality={100}
           />
